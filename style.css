@@ -1,0 +1,68 @@
+:root {
+    --bg: #f2f2f2;
+    --mainDiv: #fff;
+    --color: #2d3737;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000;
+        --mainDiv: #2d3737;
+        --color: #fff;
+    }
+}
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+body {
+    font-family: verdana;
+    font-size: 14px;
+    margin: auto;
+    min-width: max-content;
+    width: max-content;
+    color: var(--color);
+    padding: 10px;
+    background-color: var(--bg);
+}
+h2 {
+    text-align: center;
+    padding: 0px 40px 20px 10px;
+}
+p {
+    font-size: 12px;
+    padding: 0px 0px 0px 4px;
+}
+label {
+    display: inline-block;
+    width: 64px;
+}
+td {
+    height: 28px;
+}
+input[type="tel"] {
+    width: 140px;
+}
+button {
+    float: right;
+}
+select {
+    width: 70px;
+}
+select:focus {
+    outline-style: auto;
+}
+.mainDiv {
+    background-color: var(--mainDiv);
+    padding: 34px 34px 34px 34px;
+}
+#store {
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+.footer {
+    text-align: center;
+    font-size: 9px;
+    padding-top: 8px;
+}
