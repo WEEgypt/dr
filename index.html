@@ -102,6 +102,21 @@
                 </table>
                 <br />
                 <br />
+                <input type="checkbox" id="trx" />
+                <label> Transactions</label><br />
+                <input type="checkbox" id="attach" />
+                <label> Attach revision</label><br />
+                <input type="checkbox" id="contracts" />
+                <label> Contracts revision</label><br />
+                <input type="checkbox" id="cash" />
+                <label> Cash flow</label><br />
+                <input type="checkbox" id="down" />
+                <label> Store issue down</label>
+                <br />
+                <br />
+                <p>Sales And Stock:</p>
+                <textarea id="notes" placeholder="Type Here .."></textarea>
+                <br />
                 <br />
                 <button type="button" onclick="Send()">Send</button>
                 <br />
@@ -121,14 +136,54 @@
                 } else {
                     var date = document.getElementById("day").value + "/" + document.getElementById("month").value + "/" + document.getElementById("year").value;
                     var store = document.getElementById("store").value;
+                    if (document.getElementById("trx").checked) {
+                        var trx = "Transactions: Done";
+                    } else {
+                        var trx = "Transactions: Not Done";
+                    }
+                    if (document.getElementById("attach").checked) {
+                        var attach = "Attach revision: Done";
+                    } else {
+                        var attach = "Attach revision: Not Done";
+                    }
+                    if (document.getElementById("contracts").checked) {
+                        var contracts = "Contracts revision: Done";
+                    } else {
+                        var contracts = "Contracts revision: Not Done";
+                    }
+                    if (document.getElementById("cash").checked) {
+                        var cash = "Cash flow: Done";
+                    } else {
+                        var cash = "Cash flow: Not Done";
+                    }
+                    if (document.getElementById("down").checked) {
+                        var down = "Store issue down: Yes";
+                    } else {
+                        var down = "Store issue down: No";
+                    }
                     var subject = "D.R." + " || " + date + " || " + store;
+
+                    var notes = window.encodeURIComponent(document.getElementById("notes").value);
+
                     window.open(
                         "mailto:eslam.a.gomaa@te.eg?subject=" +
                             subject +
                             "&body=Dear Eslam,%0d%0a%0d%0aKindly find the Daily Report for " +
                             store +
                             " Store" +
-                            "%0d%0a%0d%0aTransactions: Done%0d%0aAttach revision: Done%0d%0aContracts revision: Done%0d%0aCash flow: Done%0d%0aStore issue down: No%0d%0a%0d%0aThanks."
+                            "%0d%0a%0d%0a" +
+                            trx +
+                            "%0d%0a" +
+                            attach +
+                            "%0d%0a" +
+                            contracts +
+                            "%0d%0a" +
+                            cash +
+                            "%0d%0a" +
+                            down +
+                            "%0d%0a%0d%0a" +
+                            notes +
+                            "%0d%0a%0d%0aThanks."
                     );
                 }
             }

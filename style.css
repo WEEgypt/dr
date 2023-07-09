@@ -21,7 +21,6 @@ body {
     font-size: 14px;
     margin: auto;
     min-width: max-content;
-    width: max-content;
     color: var(--color);
     padding: 10px;
     background-color: var(--bg);
@@ -36,7 +35,6 @@ p {
 }
 label {
     display: inline-block;
-    width: 64px;
 }
 td {
     height: 28px;
@@ -47,22 +45,37 @@ input[type="tel"] {
 button {
     float: right;
 }
-select {
-    width: 70px;
-}
 select:focus {
     outline-style: auto;
 }
 .mainDiv {
     background-color: var(--mainDiv);
-    padding: 34px 34px 34px 34px;
+    padding: 34px 64px 34px 64px;
 }
 #store {
     width: -webkit-fill-available;
     width: -moz-available;
 }
+#day,
+#month,
+#year {
+    width: 80px;
+}
 .footer {
     text-align: center;
     font-size: 9px;
     padding-top: 8px;
+}
+textarea {
+    resize: none;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    height: 240px;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+table {
+    width: -webkit-fill-available;
+    width: -moz-available;
 }
