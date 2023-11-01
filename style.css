@@ -40,7 +40,7 @@ td {
     height: 28px;
 }
 input[type="tel"] {
-    width: 140px;
+    width: 200px;
 }
 button {
     float: right;
@@ -50,30 +50,12 @@ select:focus {
 }
 .mainDiv {
     background-color: var(--mainDiv);
-    padding: 15px 25px 15px 25px;
-}
-#store {
-    width: -webkit-fill-available;
-    width: -moz-available;
-}
-#day,
-#month,
-#year {
-    width: 80px;
+    padding: 20px 30px 20px 30px;
 }
 .footer {
     text-align: center;
     font-size: 9px;
     padding-top: 8px;
-}
-textarea {
-    resize: none;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    height: 200px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: monospace;
 }
 table {
     width: -webkit-fill-available;
