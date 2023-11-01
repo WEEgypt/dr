@@ -50,7 +50,7 @@ select:focus {
 }
 .mainDiv {
     background-color: var(--mainDiv);
-    padding: 35px 30px 15px 30px;
+    padding: 35px 30px 25px 30px;
 }
 #store {
     width: -webkit-fill-available;
