@@ -27,7 +27,7 @@ body {
 }
 h2 {
     text-align: center;
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 10px 0px;
 }
 p {
     font-size: 12px;
@@ -50,7 +50,7 @@ select:focus {
 }
 .mainDiv {
     background-color: var(--mainDiv);
-    padding: 40px 30px 15px 30px;
+    padding: 35px 30px 15px 30px;
 }
 #store {
     width: -webkit-fill-available;
