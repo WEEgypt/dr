@@ -46,11 +46,11 @@
                                 <option value="26">26</option>
                                 <option value="27">27</option>
                                 <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
+                                <option id="d29" value="29">29</option>
+                                <option id="d30" value="30">30</option>
+                                <option id="d31" value="31">31</option>
                             </select>
-                            <select id="month">
+                            <select id="month" onchange="DaysFix()">
                                 <option value="" selected disabled hidden>Month</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -65,7 +65,7 @@
                                 <option value="11">11</option>
                                 <option value="12">12</option>
                             </select>
-                            <select id="year">
+                            <select id="year" onchange="DaysFix()">
                                 <option value="" selected disabled hidden>Year</option>
                                 <option value="2022">2022</option>
                                 <option value="2023">2023</option>
@@ -127,6 +127,25 @@
                 document.getElementById("day").value = new Date().getDate();
                 document.getElementById("month").value = new Date().getMonth() + 1;
                 document.getElementById("year").value = new Date().getFullYear();
+                DaysFix();
+            }
+            function DaysFix() {
+                var daysinmonth = new Date(document.getElementById("year").value, document.getElementById("month").value, 0).getDate();
+                if (daysinmonth < 31) {
+                    d31.style.display = "none";
+                } else {
+                    d31.style.display = "block";
+                }
+                if (daysinmonth < 30) {
+                    d30.style.display = "none";
+                } else {
+                    d30.style.display = "block";
+                }
+                if (daysinmonth < 29) {
+                    d29.style.display = "none";
+                } else {
+                    d29.style.display = "block";
+                }
             }
             function Send() {
                 if (document.getElementById("store").value == "") {
