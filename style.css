@@ -1,28 +1,24 @@
 :root {
-    --bg: #f2f2f2;
-    --mainDiv: #fff;
-    --color: #2d3737;
+    --bg: #fff;
+    --color: #000;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #000;
-        --mainDiv: #2d3737;
         --color: #fff;
     }
 }
 html {
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100%;
 }
 body {
-    font-family: verdana;
-    font-size: 14px;
     margin: auto;
     min-width: max-content;
+    padding: 20px;
+    font-family: verdana;
+    font-size: 14px;
     color: var(--color);
-    padding: 10px;
     background-color: var(--bg);
 }
 h2 {
@@ -36,35 +32,18 @@ p {
 label {
     display: inline-block;
 }
+table {
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
 td {
     height: 28px;
-}
-input[type="tel"] {
-    width: 140px;
 }
 button {
     float: right;
 }
 select:focus {
     outline-style: auto;
-}
-.mainDiv {
-    background-color: var(--mainDiv);
-    padding: 35px 30px 25px 30px;
-}
-#store {
-    width: -webkit-fill-available;
-    width: -moz-available;
-}
-#day,
-#month,
-#year {
-    width: 80px;
-}
-.footer {
-    text-align: center;
-    font-size: 9px;
-    padding-top: 8px;
 }
 textarea {
     resize: none;
@@ -75,7 +54,17 @@ textarea {
     box-sizing: border-box;
     font-family: monospace;
 }
-table {
+#store {
     width: -webkit-fill-available;
     width: -moz-available;
+}
+#day,
+#month,
+#year {
+    width: 74px;
+}
+.footer {
+    text-align: center;
+    font-size: 9px;
+    padding-top: 8px;
 }

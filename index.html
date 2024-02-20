@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width,initial-scale=0.95,maximum-scale=1,user-scalable=no" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <title>Daily Report</title>
         <link rel="icon" href="icon.png" />
@@ -9,119 +9,117 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body onload="GetDate()">
-        <div class="mainDiv">
-            <form>
-                <h2>Daily Report</h2>
-                <table>
-                    <tr>
-                        <td><label>Date:</label></td>
-                        <td>
-                            <select id="day">
-                                <option value="" selected disabled hidden>Day</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
-                            <select id="month" onchange="DaysFix()">
-                                <option value="" selected disabled hidden>Month</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                            <select id="year" onchange="DaysFix()">
-                                <option value="" selected disabled hidden>Year</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label>Store:</label></td>
-                        <td>
-                            <select id="store">
-                                <option value="" selected disabled hidden>Store Name</option>
-                                <option value="شرق النيل">شرق النيل</option>
-                                <option value="نادى التجديف">نادى التجديف</option>
-                                <option value="بيت الرحمه">بيت الرحمه</option>
-                                <option value="الشهيد">الشهيد</option>
-                                <option value="اخميم">اخميم</option>
-                                <option value="المنشاه">المنشاه</option>
-                                <option value="جرجا - المصريه جروب">جرجا - المصريه جروب</option>
-                                <option value="جرجا - فيوتشر">جرجا - فيوتشر</option>
-                                <option value="البلينا - فيوتشر">البلينا - فيوتشر</option>
-                                <option value="البلينا - تليكوم">البلينا - تليكوم</option>
-                                <option value="دار السلام">دار السلام</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
-                <br />
-                <br />
-                <input type="checkbox" id="trx" />
-                <label> Transactions</label><br />
-                <input type="checkbox" id="attach" />
-                <label> Attach revision</label><br />
-                <input type="checkbox" id="contracts" />
-                <label> Contracts revision</label><br />
-                <input type="checkbox" id="cash" />
-                <label> Cash flow</label><br />
-                <input type="checkbox" id="down" />
-                <label> Store issue down</label>
-                <br />
-                <br />
-                <p>Sales And Stock:</p>
-                <textarea id="notes" placeholder="Type Here .."></textarea>
-                <br />
-                <br />
-                <button type="button" onclick="Send()">Generate</button>
-                <br />
-                <br />
-            </form>
-        </div>
+        <form>
+            <h2>Daily Report</h2>
+            <table>
+                <tr>
+                    <td><label>Date:</label></td>
+                    <td>
+                        <select id="day">
+                            <option value="" selected disabled hidden>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <select id="month" onchange="DaysFix()">
+                            <option value="" selected disabled hidden>Month</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select id="year" onchange="DaysFix()">
+                            <option value="" selected disabled hidden>Year</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Store:</label></td>
+                    <td>
+                        <select id="store">
+                            <option value="" selected disabled hidden>Store Name</option>
+                            <option value="شرق النيل">شرق النيل</option>
+                            <option value="نادى التجديف">نادى التجديف</option>
+                            <option value="بيت الرحمه">بيت الرحمه</option>
+                            <option value="الشهيد">الشهيد</option>
+                            <option value="اخميم">اخميم</option>
+                            <option value="المنشاه">المنشاه</option>
+                            <option value="جرجا - المصريه جروب">جرجا - المصريه جروب</option>
+                            <option value="جرجا - فيوتشر">جرجا - فيوتشر</option>
+                            <option value="البلينا - فيوتشر">البلينا - فيوتشر</option>
+                            <option value="البلينا - تليكوم">البلينا - تليكوم</option>
+                            <option value="دار السلام">دار السلام</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <input type="checkbox" id="trx" />
+            <label> Transactions</label><br />
+            <input type="checkbox" id="attach" />
+            <label> Attach revision</label><br />
+            <input type="checkbox" id="contracts" />
+            <label> Contracts revision</label><br />
+            <input type="checkbox" id="cash" />
+            <label> Cash flow</label><br />
+            <input type="checkbox" id="down" />
+            <label> Store issue down</label>
+            <br />
+            <br />
+            <p>Notes:</p>
+            <textarea id="notes" placeholder="Type Here .."></textarea>
+            <br />
+            <br />
+            <button type="button" onclick="Send()">Generate</button>
+            <br />
+            <br />
+        </form>
         <script>
             function GetDate() {
                 document.getElementById("day").value = new Date().getDate();
@@ -229,12 +227,11 @@
                             down +
                             "%0A%0A" +
                             notes +
-                            "%0A%0AThanks."
+                            "%0A%0A%0AThanks."
                     );
                 }
             }
         </script>
-        <br />
         <footer>
             <p class="footer">Developed by: Mamdouh Khalaf .. "MUE Team"</p>
         </footer>
