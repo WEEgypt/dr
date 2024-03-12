@@ -205,10 +205,12 @@
                     } else {
                         var down = "Store issue down: No";
                     }
+                    if (document.getElementById("notes").value == "") {
+                        var notes = "";
+                    } else {
+                        var notes = window.encodeURIComponent(document.getElementById("notes").value) + "%0A%0A";
+                    }
                     var subject = "D.R." + " || " + date + " || " + store;
-
-                    var notes = window.encodeURIComponent(document.getElementById("notes").value);
-
                     window.open(
                         "mailto:eslam.a.gomaa@te.eg?subject=" +
                             subject +
@@ -227,7 +229,7 @@
                             down +
                             "%0A%0A" +
                             notes +
-                            "%0A%0A%0AThanks."
+                            "%0AThanks."
                     );
                 }
             }
