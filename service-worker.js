@@ -14,8 +14,8 @@
 }
 self.addEventListener("install", (event) => {
     event.waitUntil(
-        caches.open("my-pwa-cache").then((cache) => {
-            return cache.addAll(["icon.png", "index.html", "manifest.webmanifest", "pulltorefresh.js", "style.css"]);
+        caches.open("dailyReport-cache-v1").then((cache) => {
+            return cache.addAll(["icon.png", "icon512_maskable.png", "icon512_rounded.png", "index.html", "manifest.json", "service-worker.js", "style.css"]);
         })
     );
 });
