@@ -1,7 +1,7 @@
 // firebase-messaging-sw.js
 
-importScripts('https://www.gstatic.com/firebasejs/9.x/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/9.x/firebase-messaging.js');
+importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js');
 
 // Initialize Firebase
 const firebaseConfig = {
