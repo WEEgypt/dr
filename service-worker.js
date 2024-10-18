@@ -21,7 +21,6 @@ self.addEventListener("install", (event) => {
   );
   self.skipWaiting();
 });
-
 self.addEventListener("fetch", (event) => {
   const requestURL = new URL(event.request.url);
   if (
@@ -31,30 +30,27 @@ self.addEventListener("fetch", (event) => {
     return;
   }
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request)
-        .then((networkResponse) => {
-          if (
-            !networkResponse ||
-            networkResponse.status !== 200 ||
-            networkResponse.type === "opaque"
-          ) {
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.match(event.request).then((cachedResponse) => {
+        const fetchPromise = fetch(event.request)
+          .then((networkResponse) => {
+            if (
+              networkResponse &&
+              networkResponse.status === 200 &&
+              networkResponse.type !== "opaque"
+            ) {
+              cache.put(event.request, networkResponse.clone());
+            }
             if (networkResponse && networkResponse.status === 404) {
               return caches.match(NOT_FOUND_URL);
             }
             return networkResponse;
-          }
-          return caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
+          })
+          .catch(() => {
+            return caches.match(OFFLINE_URL);
           });
-        })
-        .catch(() => {
-          return caches.match(OFFLINE_URL);
-        });
+        return cachedResponse || fetchPromise;
+      });
     })
   );
 });
