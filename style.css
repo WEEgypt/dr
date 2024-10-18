@@ -1,70 +1,70 @@
 :root {
-    --bg: #fff;
-    --color: #000;
+  --bg: #fff;
+  --color: #000;
 }
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #000;
-        --color: #fff;
-    }
+  :root {
+    --bg: #000;
+    --color: #fff;
+  }
 }
 html {
-    display: flex;
-    min-height: 100%;
+  display: flex;
+  min-height: 100%;
 }
 body {
-    margin: auto;
-    min-width: max-content;
-    padding: 20px;
-    font-family: verdana;
-    font-size: 14px;
-    color: var(--color);
-    background-color: var(--bg);
+  margin: auto;
+  min-width: max-content;
+  padding: 20px;
+  font-family: verdana;
+  font-size: 14px;
+  color: var(--color);
+  background-color: var(--bg);
 }
 h2 {
-    text-align: center;
-    padding: 0px 0px 10px 0px;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
 }
 p {
-    font-size: 12px;
-    padding: 0px 0px 0px 4px;
+  font-size: 12px;
+  padding: 0px 0px 0px 4px;
 }
 label {
-    display: inline-block;
+  display: inline-block;
 }
 table {
-    width: -webkit-fill-available;
-    width: -moz-available;
+  width: -webkit-fill-available;
+  width: -moz-available;
 }
 td {
-    height: 28px;
+  height: 28px;
 }
 button {
-    float: right;
+  float: right;
 }
 select:focus {
-    outline-style: auto;
+  outline-style: auto;
 }
 textarea {
-    resize: none;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    height: 200px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: monospace;
+  resize: none;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 #store {
-    width: -webkit-fill-available;
-    width: -moz-available;
+  width: -webkit-fill-available;
+  width: -moz-available;
 }
 #day,
 #month,
 #year {
-    width: 80px;
+  width: 80px;
 }
 .footer {
-    text-align: center;
-    font-size: 9px;
-    padding-top: 8px;
+  text-align: center;
+  font-size: 9px;
+  padding-top: 8px;
 }
